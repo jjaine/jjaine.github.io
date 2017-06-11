@@ -23,7 +23,7 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: #32E099;
+  color: #32a5e0;
 }
 a:hover,
 a:focus {
@@ -43,7 +43,7 @@ p {
   margin-bottom: 20px;
 }
 .bg-primary {
-  background-color: #175C76;
+  background-color: #9c0606;
 }
 .bg-dark {
   background-color: #222222;
@@ -130,7 +130,7 @@ aside {
     border-color: rgba(34, 34, 34, 0.05);
   }
   .navbar-default.affix .navbar-header .navbar-brand {
-    color: #32E099;
+    color: #32a5e0;
     font-size: 14px;
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
