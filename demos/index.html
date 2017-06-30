@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-100942354-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
     <head>
 
         <meta charset="utf-8">
@@ -42,22 +52,22 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Essi Jukkala | Ketsu game</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Essi Jukkala | Game demos</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
+                    <a class="page-scroll" href="#about">Asteroid defense</a>
+                    </li>
+                    <li>
+                    <a class="page-scroll" href="#about2">Defender clone</a>
+                    </li>
+                    <li>
                     <a href="../index.html">Back</a>
                     </li>
                     <!--<li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                    <a class="page-scroll" href="#cv">Curriculum vitae</a>
-                    </li>
-                    <li>
                     <a class="page-scroll" href="#contact">Contact</a>
                     </li>-->
                 </ul>
@@ -70,8 +80,8 @@
         <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Essi Jukkala | Ketsu Game</h1>
-                <p>Ketsu is a mobile puzzle game about symmetry and mirrored movement.</p>
+                <h1 id="homeHeading">Game Demos</h1>
+                <p>Defender clone, Asteroid Defense</p>
             </div>
         </div>
         </header>
@@ -79,21 +89,72 @@
         <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
-                            
-                      <div class="col-lg-8">
-                    <video width="600" controls>
-                    <source src="video/ketsu.mp4" type="video/mp4">
-                    Your browser does not support HTML5 video.
-                    </video>
+
+                <div class="col-lg-6">
+                    <img src="img/asteroid-defense.png" width="100%">
                 </div>
-                      <div class="col-lg-4">
-                          <p>
-                    Made for Game Project (Aalto University). I did this and this and asdasd.
-                          <ul>
-                        <li>Role: Tools & UI Programmer</li>
-                        <li>Tech: C#, Unity, Wwise</li>
-                        <li><a href="game/index.html">Play online</a></li>
-                        <li>Download for <a href="http://karuselli.dy.fi/jaine-files/ketsu.apk">Android</a>, macOS, <a href="http://karuselli.dy.fi/jaine-files/ketsu.zip">Windows</a></li>
+                <div class="col-lg-6">
+                    <h2>Asteroid defense</h2>
+                    <p>
+                    <ul>
+                        <li>Tech: C#, Unity</li>
+                        <li><a href="asteroid-defense/index.html">Play online</a></li>
+                        <li><a href="https://github.com/jjaine/asteroid-defense">Repository</a></li>
+                    </ul></p><p>
+                    Made for a job interview.</p><p> Requirements:</p>
+                    <p style="font-style:italic">Earth is being bombarded by asteroids and it’s your job to destroy them before they cause damage. You control a huge turret that can fire missiles at any asteroids that would come within a designated safety zone.
+                    </p>
+                    <p>The simulation runs in a 2D top-down environment. For the purpose of this exercise, you can completely ignore the effect of gravity.
+                    Earth (and the turret) are located at the center of the screen.
+                    The player can “throw" asteroids towards earth (e.g. by dragging with mouse)
+                    When a new asteroid is spawned, the turret needs to check if the trajectory comes within the safety zone.
+                    If the asteroid would come too close, the turret needs to fire a missile, which intercepts the asteroid.
+                    Your working implementation should include two methods with the following (or similar) signatures:
+                    <ul style="font-family: Courier New, monospace;">
+                        <li>bool TrajectoryWithinSafetyZone(Vector3 asteroidPosition, Vector3 asteroidVelocity)</li>
+                        <li>Vector3 CalculateMissileVelocity(Vector3 asteroidPosition, Vector3 asteroidVelocity)</li>
+                    </ul>
+                    </p>
+                    <p>Here are some other facts about the scenario:
+                    <ul>
+                        <li>The turret can fire immediately into any direction. There is no targeting delay.</li>
+                        <li>The turret must fire immediately when a new (dangerous) asteroid is spawned.</li>
+                        <li>As there is no gravity, the velocity of an asteroid stays constant after it has been spawned.</li>
+                        <li>Missiles are always launched with a constant speed S. You only decide the angle of the velocity vector - not its magnitude.</li>
+                    </ul>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        </section>
+        
+        <section class="bg-dark" id="about2">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <img src="img/header.jpg" width="100%">
+                </div>
+                <div class="col-lg-6">
+                    <h2>Defender clone</h2>
+                    <p>
+                    <ul>
+                        <li>Tech: C#, Unity</li>
+                        <li><a href="defender-clone/index.html">Play online</a></li>
+                        <li><a href="https://github.com/jjaine/defender-clone">Repository</a></li>
+                    </ul></p><p>
+                    Made for a job interview.</p><p> Requirements implemented:</p>
+
+                    <ul>
+                        <li>The space ship is in the middle of the screen, but can move up and down.</li>
+                        <li>The player can move to either direction, left or right.</li>
+                        <li>The play field scrolls with the space ship's movement to left or right</li>
+                        <li>The play field wraps around.</li>
+                        <li>Enemies spawn randomnly and the travel towards the player.</li>
+                        <li>Bonus: Enemies can shoot the player.</li>
+                        <li>Bonus: Wrapping background graphics.</li>
+                        <li>Bonus: Scoring system.</li>
                     </ul>
                     </p>
                 </div>
